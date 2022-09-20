@@ -2,10 +2,11 @@
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
-import time   
+import time  
+import pandas as pd 
 
 def insert_city(city): 
-    path= 'C:\Program Files (x86)\chromedriver.exe'
+    path= '/Users/hugol/chromedriver'
     driver = webdriver.Chrome(path)
     url = 'https://www.ou-et-quand.net/partir/quand/'
     driver.get(url)
@@ -35,7 +36,7 @@ def extract(bs):
 
 def insert_month(month):
     ## Choix du mois préféré (mp)
-    PATH = "C:\Program Files (x86)\chromedriver.exe"
+    PATH = "/Users/hugol/chromedriver"
     driver = webdriver.Chrome(PATH)
     month = month.lower()
     driver.get("https://partir.ouest-france.fr/meteo/oupartiren"+month+".php")
@@ -94,14 +95,42 @@ def Interface_Saisie():
     root.mainloop()
     return lc[0], lm[0]
 
-### Code final ###
+#### 10 best places ###
+
+def best_places(city):
+    PATH = "/Users/hugol/chromedriver"
+    driver = webdriver.Chrome(PATH)
+    city = city.lower()
+    driver.get("https://generationvoyage.fr/visiter-"+city+"-faire-voir/")
+    driver.find_element_by_class_name("css-bcexub").click()
+    todo= driver.find_elements_by_class_name("title_lvl3")
+    tds=[]
+    for i in range(min(len(todo),10)):
+        todo= driver.find_elements_by_class_name("title_lvl3")
+        td= todo[i].text
+        tds.append(td)
+    driver.close()
+    return tds
+
+#### Code final ###
 
 result = Interface_Saisie()
 city = str(result[0])
 month = str(result[1])
-
+'''
+if city == '':
+    Interface1
+elif month == '':
+    Interface2
+'''
 bs = insert_city(city)
 dict_meteo = extract(bs)
 df_city = insert_month(month)
+best_place = best_places(city)
 print(dict_meteo) # Dictionnaire avec la situation meteo relier a un mois
 print(df_city)
+print(best_place)
+
+
+
+
