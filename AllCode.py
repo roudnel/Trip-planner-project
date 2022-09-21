@@ -1,9 +1,8 @@
-#### Fonction best month to go ###
+#%% Fonction best month to go
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import time  
-import pandas as pd 
 
 def insert_city(city): 
     path= '/Users/hugol/chromedriver'
@@ -31,8 +30,7 @@ def extract(bs):
         lst_situation.append(fav.get_text())
     dict_meteo = dict(zip(lst_month, lst_situation))
     return dict_meteo
-
-#### Fonction best city to go per month
+#%% Fonction best city to go per month
 
 def insert_month(month):
     ## Choix du mois préféré (mp)
@@ -57,12 +55,9 @@ def insert_month(month):
         abc = driver.find_element_by_xpath(xpath)
         ville=abc.text
         villes.append(ville)
-    df = pd.DataFrame(villes)
-    df.rename(columns = {0:'Top 10 Villes à visiter en '+month}, inplace = True)
     driver.close()
-    return df
-
-#### Fonction first interface ###
+    return villes
+#%% Fonction first interface
 
 from tkinter import *
 
@@ -94,8 +89,49 @@ def Interface_Saisie():
     b1.grid(pady=10, row=1, column=3)
     root.mainloop()
     return lc[0], lm[0]
+#%% Interface if no city got selected
 
-#### 10 best places ###
+from tkinter import *
+
+def city_choice():
+    root = Tk()
+    root.title("Trip Planner")
+    city = StringVar()
+    city2 =[]
+    
+    def quit():
+        city2.append(city.get())
+        root.destroy()
+        
+    for i in range(0,10):
+        Radiobutton(root, text=cities[i], variable=city, value=cities[i]).grid(row=i, column= 0, sticky=W)
+    
+    Button(root, text='Confirmer', command=quit).grid(row=10, column=0)
+    mainloop()    
+        
+    return city2
+#%% Interface if no month selected
+
+from tkinter import *
+
+def month_choice():
+    root = Tk()
+    root.title("Trip Planner")
+    month = StringVar()
+    month2 =[]
+    
+    def quit():
+        month2.append(month.get())
+        root.destroy()
+        
+    for i in range(0,12):
+        Label(root, text=list(dict_meteo)[i]).grid(row=i, column=0, sticky=E)
+        Radiobutton(root, text=dict_meteo.get(list(dict_meteo)[i]), variable=month, value=list(dict_meteo)[i]).grid(row=i, column= 1, sticky=W)
+    
+    Button(root, text='Confirmer', command=quit).grid(row=12, column=1)
+    mainloop()
+    return month2
+#%% 10 best places
 
 def best_places(city):
     PATH = "/Users/hugol/chromedriver"
@@ -110,27 +146,28 @@ def best_places(city):
         td= todo[i].text
         tds.append(td)
     driver.close()
-    return tds
-
-#### Code final ###
+    return tds         ##### PROBLEME CERTAINES VILLES NE MARCHE PAS
+#%% Code final
 
 result = Interface_Saisie()
 city = str(result[0])
 month = str(result[1])
-'''
+
 if city == '':
-    Interface1
+    cities = insert_month(month)
+    city = city_choice()[0]
+    best_place = best_places(city)
+    print(city)
+    print(month)
+    print(best_place)
+    
 elif month == '':
-    Interface2
-'''
-bs = insert_city(city)
-dict_meteo = extract(bs)
-df_city = insert_month(month)
-best_place = best_places(city)
-print(dict_meteo) # Dictionnaire avec la situation meteo relier a un mois
-print(df_city)
-print(best_place)
-
-
+    bs = insert_city(city)
+    dict_meteo = extract(bs)
+    month2 = month_choice()
+    best_place = best_places(city)
+    print(city)
+    print(month2)
+    print(best_place)
 
 
