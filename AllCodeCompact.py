@@ -1,6 +1,5 @@
 from Interface import Interface_Saisie
-from BestMonth import insert_city
-from BestMonth import extract
+from BestMonth import insert_city, extract
 from BestCities import insert_month
 from Interface_nocity import city_choice
 from Interface_nomonth import month_choice
