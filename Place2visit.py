@@ -15,11 +15,11 @@ def best_places(city):
     time.sleep(2)
     pyautogui.press("enter")
     driver.find_element_by_xpath("//*[@id='global-nav-attractions']").click()
-
     time.sleep(5)
     lst_place=[]
     for i in range(1, 11):
         place = driver.find_element_by_xpath("//*[@id='lithium-root']/main/span/div/div[3]/div/div[2]/div[2]/span/div/div[2]/section[4]/div/div/span/div/div[2]/div/span["+str(i)+"]/div/article/div[2]/header/div/div/a[1]/h3/div/span/div").text
         lst_place.append(place)
+    driver.close()
     return lst_place
 
