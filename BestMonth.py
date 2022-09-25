@@ -22,12 +22,34 @@ def insert_city(city):
 def extract(bs):
     lst_month = []
     lst_situation = []
+    lst_met_danger = []
+    lst_met_warning = []
+    lst_met_success = []
     for i in range(12):
         positif = bs.find_all('b', class_='uppercase_big')[i]
         lst_month.append(positif.string)
     for i in range(1,13):
         fav = bs.find_all(class_='hidden-xs nopaddingleft')[i]
         lst_situation.append(fav.get_text())
+        
+    #récupération météo en rouges
+    for i in bs.find_all('tr', class_='danger-full'):
+        for j in range (1,2):
+            aj=i.find_all('b')[j]
+            lst_met_danger.append(aj.get_text())
+            
+    #récupération météo en jaune
+    for i in bs.find_all('tr', class_='warning'):
+        for j in range (1,2):
+            aj=i.find_all('b')[j]
+            lst_met_warning.append(aj.get_text())
+            
+    #récupération météo en vert
+    for i in bs.find_all('tr', class_='success'):
+        for j in range (1,2):
+            aj=i.find_all('b')[j]
+            lst_met_success.append(aj.get_text())
+
     dict_meteo = dict(zip(lst_month, lst_situation))
-    return dict_meteo
+    return dict_meteo , lst_met_success , lst_met_warning ,lst_met_danger
 
