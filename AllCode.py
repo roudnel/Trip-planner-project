@@ -53,7 +53,7 @@ def extract(bs):
     dict_meteo = dict(zip(lst_month, lst_situation))
               
     
-    return dict_meteo,lst_met_dange,  lst_met_warning, lst_met_success 
+    return dict_meteo,lst_met_danger,  lst_met_warning, lst_met_success 
          
 
 #%% Fonction best city to go per month
