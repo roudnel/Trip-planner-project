@@ -3,6 +3,8 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import time  
+import csv
+import pandas as pd
 
 def insert_city(city): 
     path= '/Users/hugol/chromedriver'
