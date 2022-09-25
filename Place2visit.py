@@ -1,4 +1,3 @@
-from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 import time
 import pyautogui
@@ -22,4 +21,3 @@ def best_places(city):
         lst_place.append(place)
     driver.close()
     return lst_place
-
