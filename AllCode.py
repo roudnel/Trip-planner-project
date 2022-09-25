@@ -51,7 +51,10 @@ def extract(bs):
             lst_met_success.append(aj.get_text())
 
     dict_meteo = dict(zip(lst_month, lst_situation))
-    return dict_meteo , lst_met_success , lst_met_warning ,lst_met_danger
+    temp= dict(zip(lst_met_success,lst_met_danger))    
+    temp_j= lst_met_warning            
+    
+    return dict_meteo , temp, temp_j
 
 #%% Fonction best city to go per month
 
