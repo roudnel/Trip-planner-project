@@ -196,4 +196,6 @@ elif month == '':
     print(month2)
     print(best_place)
 
-
+df = pd.DataFrame({'Nom de la ville' :city,'Le mois' : month, 'Lieux a visiter': best_place2})
+print(df)
+df.to_csv('trip_planner',index=False)
