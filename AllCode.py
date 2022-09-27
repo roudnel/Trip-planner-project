@@ -177,6 +177,30 @@ def best_places(city):
     return tds         ##### PROBLEME CERTAINES VILLES NE MARCHE PAS
 #%% Code final
 
+def search_restaurant(city):
+    
+    website = 'https://www.tripadvisor.fr/Restaurants'
+    import pyautogui
+    path = '/Users/Laetitia/OneDrive/Documents/MS dS2E/Projet Kevin/chromedriver'
+    driver = webdriver.Chrome(path)
+    driver.get(website)
+    time.sleep(5)
+    driver.find_element("id","onetrust-reject-all-handler").click()
+    
+    time.sleep(5)
+    driver.find_element("xpath",'//*[@id="component_6"]/div/div/form/input[1]').click()
+    driver.find_element("xpath",'//*[@id="component_6"]/div/div/form/input[1]').send_keys(city)
+ 
+    driver.find_element("xpath",'//*[@id="component_6"]/div/div/form/button[3]').click()
+    time.sleep(4)
+    driver.find_element("xpath",'//*[@id="search-filters"]/ul/li[4]/a').click()
+    time.sleep(4)
+    results=driver.find_elements("xpath",'//div[@class="result-title"]/span')
+    [print(i.text) for i in results]
+
+    restaurants = driver.find_elements("xpath",'//div[@class="result-title"]')
+    driver.close()
+
 result = Interface_Saisie()
 city = str(result[0])
 month = str(result[1])
@@ -190,6 +214,7 @@ if city == '':
     print(city)
     print(month)
     print(best_place)
+    print(search_restaurant)
     
 elif month == '':
     bs = insert_city(city)
@@ -199,17 +224,18 @@ elif month == '':
     print(city)
     print(month2)
     print(best_place)
+    print(search_restaurant)
     
 best_place2 = best_places(city)
+resto=search_restaurant(city)
 
 data_dict={'Ville' :city,
            'Mois' : month, 
-           'Lieux à visiter': best_place2}
-    # Create a Pandas dataframe from the data.
+           'Lieux à visiter': best_place2,
+           'Restaurant':resto}
+# Create a Pandas dataframe from the data.
 df = pd.DataFrame.from_dict(data_dict)
-#print(df)
-#result = df.columns
-#print(result)
+
 
 
 df.to_csv('C:/Users/Laetitia/OneDrive/Documents/MS dS2E/Projet Kevin/Trip-planner-project-main/trip_ planner.csv',index=False)
