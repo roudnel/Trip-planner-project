@@ -4,7 +4,7 @@ from BestCities import insert_month
 from Interface_nocity import city_choice
 from Interface_nomonth import month_choice
 from Place2visit import best_places
-from restaurant import search_restaurant
+from Restaurants import search_restaurant
 from Error import error
 
 
