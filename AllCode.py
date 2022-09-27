@@ -204,7 +204,7 @@ def search_restaurant(city):
 result = Interface_Saisie()
 city = str(result[0])
 month = str(result[1])
-best_place2 = best_places(city)
+
 
 
 if city == '':
