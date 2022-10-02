@@ -29,7 +29,7 @@ def search_restaurant(city):
     time.sleep(4)
     results=driver.find_elements("xpath",'//div[@class="result-title"]/span')
     #[print(i.text) for i in results]
-    #le code que j'ai ajouté
+    
     for j in range (0,10):
         restaurants.append(results[j].text)
     #les 10 restaurants se trouvent dans restaurants
