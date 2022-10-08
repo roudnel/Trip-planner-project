@@ -161,9 +161,9 @@ def best_places(city):
 
 
     
-def search_restaurant():
+def search_restaurant(city):
     
-    search="Paris"
+    
     website = 'https://www.tripadvisor.fr/Restaurants'
     import pyautogui
     path = 'chromedriver.exe'
@@ -176,7 +176,7 @@ def search_restaurant():
     
     time.sleep(5)
     driver.find_element("xpath",'//*[@id="component_6"]/div/div/form/input[1]').click()
-    driver.find_element("xpath",'//*[@id="component_6"]/div/div/form/input[1]').send_keys(search)
+    driver.find_element("xpath",'//*[@id="component_6"]/div/div/form/input[1]').send_keys(city)
     time.sleep(5)
     driver.find_element("xpath",'//*[@id="typeahead_results"]/a[1]').click()
     time.sleep(5)
@@ -187,50 +187,66 @@ def search_restaurant():
     for j in range (0,10):
         restaurants.append(List_of_rest[j].text)
     return restaurants
-
+    
+    driver.close()
    
-driver.close()
 
-result = Interface_Saisie()
-city = str(result[0])
-month = str(result[1])
+#%% Code final
 
-
-
-if city == '':
+if city == '' and month!='':
     cities = insert_month(month)
-    city = city_choice()[0]
+    city = city_choice(cities)[0]
     best_place = best_places(city)
+    resto=search_restaurant(city)
+    
     print(city)
     print(month)
     print(best_place)
     print(search_restaurant)
-    
-elif month == '':
+ 
+
+elif month == '' and city!='':
     bs = insert_city(city)
     dict_meteo = extract(bs)
-    month2 = month_choice()
+    month2 = month_choice(dict_meteo)
     best_place = best_places(city)
+    resto=search_restaurant(city)
     print(city)
     print(month2)
     print(best_place)
     print(search_restaurant)
     
-best_place2 = best_places(city)
-resto=search_restaurant(city)
+else :
+    best_place = best_places(city)
+    resto=search_restaurant(city)
+    print(city)
+    print(month)
+    print(best_place)
+    print(search_restaurant)
+    
+     
 
-data_dict={'Ville' :city,
-           'Mois' : month, 
-           'Lieux à visiter': best_place2,
-           'Restaurant':resto}
-# Create a Pandas dataframe from the data.
+
+data_dict={ 
+           'Lieux à visiter': best_place,
+           'Restaurant':resto
+            }
+    # Create a Pandas dataframe from the data.
 df = pd.DataFrame.from_dict(data_dict)
 
 
-
 df.to_csv('C:/Users/Laetitia/OneDrive/Documents/MS dS2E/Projet Kevin/Trip-planner-project-main/trip_ planner.csv',index=False)
-
-
 df2 = pd.read_csv('C:/Users/Laetitia/OneDrive/Documents/MS dS2E/Projet Kevin/Trip-planner-project-main/trip_ planner.csv')
 print(df2)
+
+
+
+
+
+
+
+
+
+    
+
 
