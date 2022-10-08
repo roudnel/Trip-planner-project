@@ -3,9 +3,9 @@ from bs4 import BeautifulSoup
 import time
 
 
-def search_restaurant():
+def search_restaurant(city):
     
-    search="Paris"
+    
     website = 'https://www.tripadvisor.fr/Restaurants'
     import pyautogui
     path = 'chromedriver.exe'
@@ -18,7 +18,7 @@ def search_restaurant():
     
     time.sleep(5)
     driver.find_element("xpath",'//*[@id="component_6"]/div/div/form/input[1]').click()
-    driver.find_element("xpath",'//*[@id="component_6"]/div/div/form/input[1]').send_keys(search)
+    driver.find_element("xpath",'//*[@id="component_6"]/div/div/form/input[1]').send_keys(city)
     time.sleep(5)
     driver.find_element("xpath",'//*[@id="typeahead_results"]/a[1]').click()
     time.sleep(5)
