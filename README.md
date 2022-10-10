@@ -70,15 +70,19 @@ Le module error permet d'afficher un message d'erreur au cas où l'utilisateur o
    **Outils/ Packages** : *tkinter*
 
 #### 5. Interface.py
-Ce module contient la fonction qui affiche la première boite de dialogue devant interragir avec l'utilisateur. Elle donne la possibilité à ce dernier d'insérer la ville de son choix et/ou le mois désiré.
+Ce module contient la fonction qui affiche la première boite de dialogue devant interragir avec l'utilisateur. Elle lui donne la possibilité d'insérer la ville de son choix et/ou le mois désiré puis de lancer la recherche.
 
    **Outils/ Packages** : *tkinter*
 
 #### 6. Interface_nocity.py
+Dans le cas où l'utilisateur ne choisit que le mois, ce module intervient grâce à sa fonction définie pour extraire les 10 meilleures destinations pour le mois choisi. La fenêtre qui s'affiche offre alors dix possibilités à choix unique et obligatoire à l'utilisateur. 
 
+   **Outils/ Packages** : *tkinter*
 
 #### 7. Interface_nomonth.py
+Dans le cas où l'utilisateur ne choisit que la ville et à partir de la fonction qui y est définie, ce module propose une fenêtre avec les 12 mois de l'année accompagnée de la situation de la météo. L'utilisateur dispose alors d'un choix unique et obligatoire.
 
+   **Outils/ Packages** : *tkinter*
 
 #### 8. Place2visit.py
 
