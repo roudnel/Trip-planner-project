@@ -49,45 +49,46 @@ Le fichier téléchargé comporte 11 fichiers python avec une extension (.py). C
      9. Restaurants.py
     10. Temp.py
     11. TripPlanner.py
-###### 1. BestCities.py
+#### 1. BestCities.py
 Ce module contient la fonction permettant de déterminer les meilleures destinations pour un mois donné. Grâce à l'outil Selenium, les données sont recueillies sur le site "Où et quand partir" de Ouest France : https://partir.ouest-france.fr/. Son principe de fonctionnement consiste à récupérer et retourner la liste des 10 meilleures destinations à visiter pour le mois choisi.
 
    **Outils/ Packages** : *Selenium*
 
-###### 2. BestMonth.py
+#### 2. BestMonth.py
 Ce module permet de trouver les meilleurs mois pour visiter une ville déterminée en se basant notamment sur la température durant cette période. La fonction définie permet, grâce aux outils BeautifulSoup et Selenium, de récolter les informations nécessaires sur le site "Où et quand" : https://www.ou-et-quand.net/partir/quand/.
     
    **Outils/ Packages** : *BeautifulSoup, Selenium, time*
    
-###### 3. Dashboard.py
+#### 3. Dashboard.py
 Le module Dashboard permet d'afficher les informations enregitrées dans le fichier excel créé à la fin du lancement de TriPlanner. 
 
    **Outils/ Packages** : *Streamlit, pandas*
 
-###### 4. Error.py
+#### 4. Error.py
 Le module error permet d'afficher un message d'erreur au cas où l'utilisateur oublierait d'insérer une critère de recherche dans la première boite de dialogue qui s'affiche.
 
    **Outils/ Packages** : *tkinter*
 
-###### 5. Interface.py
+#### 5. Interface.py
+Ce module contient la fonction qui affiche la première boite de dialogue devant interragir avec l'utilisateur. Elle donne la possibilité à ce dernier d'insérer la ville de son choix et/ou le mois désiré.
+
+   **Outils/ Packages** : *tkinter*
+
+#### 6. Interface_nocity.py
 
 
-
-###### 6. Interface_nocity.py
-
-
-###### 7. Interface_nomonth.py
+#### 7. Interface_nomonth.py
 
 
-###### 8. Place2visit.py
+#### 8. Place2visit.py
 
 
-###### 9. Restaurants.py
+#### 9. Restaurants.py
 
 
-###### 10. Temp.py
+#### 10. Temp.py
 
 
-###### 11. TripPlanner.py
+#### 11. TripPlanner.py
 
 
