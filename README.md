@@ -85,14 +85,22 @@ Dans le cas où l'utilisateur ne choisit que la ville et à partir de la fonctio
    **Outils/ Packages** : *tkinter*
 
 #### 8. Place2visit.py
+Ce module contient la fonction capable de lister les 10 endroits à visiter d'une ville donnée. Elle exploite le site https://www.tripadvisor.fr/ notamment grâce à Selenium.
 
+   **Outils/ Packages** : *Selenium, time, pyautogui*
 
 #### 9. Restaurants.py
+
+
+   **Outils/ Packages** : *Selenium, BeautifulSoup, time*
 
 
 #### 10. Temp.py
 
 
+   **Outils/ Packages** : *BeautifulSoup, Selenium, time*
+   
 #### 11. TripPlanner.py
 
 
+   **Outils/ Packages** : *pandas*
