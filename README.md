@@ -12,13 +12,17 @@ Dépendamment de votre cas, il vous permet d'obtenir la meilleure période à vi
 
 TPP a été conçu afin de faciliter son utilisation auprès des utilisateurs. A cet effet, l'utilisateur doit suivre les étapes suivantes :
 
-Afin de disposer de l'environnement adéquat
+I- Afin de disposer de l'environnement adéquat
+
     1. Télécharger le fichier Trip-planner et l"enregistrer dans un dossier sur son ordinateur
     2. Télécharger Chromedriver.exe et l'enregistrer dans le dossier trip-planner
 
-Pour lancer TPP
-    3. Ouvrir la terminale à partir de la fenêtre du dossier trip-planner
-    4. 
+II- Pour lancer TPP et obtenir les informations souhaitées
+
+    3. Ouvrir le terminal à partir de la fenêtre du dossier trip-planner
+    4. Entrer la commande : "python allpackages.py" + enter (Puis attendre que tous les packages nécessaires soient installés)
+    5. Entrer la commande : "python trip-planner.py" + enter
+    6. Entrer la commande : "streamlit run dashborad.py" + enter
  
 
 
