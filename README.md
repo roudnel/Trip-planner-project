@@ -90,17 +90,16 @@ Ce module contient la fonction capable de lister les 10 endroits à visiter d'un
    **Outils/ Packages** : *Selenium, time, pyautogui*
 
 #### 9. Restaurants.py
-
+Ce module permet de sortir la liste des 10 meilleurs restaurants d'une ville. Les données sont exploitées sur le site https://www.tripadvisor.fr/Restaurants à partir des outils Selenium et BeautifulSoup. La fonction définie prend en compte la ville sélectionnée par l'utilisateur pour accéder aux meilleurs restaurants.
 
    **Outils/ Packages** : *Selenium, BeautifulSoup, time*
 
-
 #### 10. Temp.py
-
+Ce module s'occupe de la température. En effet, il extrait les températures mensuelles pour la ville sélectionnée sur le site https://www.ou-et-quand.net/partir/quand/. Les données recueillies permettent à l'utilisateur de savoir quelle est la tendance habituelle météologique de la ville à visiter pour chaque mois.
 
    **Outils/ Packages** : *BeautifulSoup, Selenium, time*
    
 #### 11. TripPlanner.py
-
+Ce derniere module est en réalité une version compactée du code du programme. Il permet de lancer l'ensemble des fonctions que contient les autres modules. En plus de faire appel à tous les modules précités, il utilise également pandas pour enregistrer à la fin les données dans un fichier excel.
 
    **Outils/ Packages** : *pandas*
