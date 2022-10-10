@@ -5,13 +5,10 @@ import time
 
 def search_restaurant(city):
     
-    
     website = 'https://www.tripadvisor.fr/Restaurants'
-    import pyautogui
-    path = 'chromedriver.exe'
+    path = '/Users/hugol/chromedriver'
     driver = webdriver.Chrome(path)
     driver.get(website)
-    time.sleep(5)
     restaurants=[]
     time.sleep(5)
     driver.find_element("id","onetrust-reject-all-handler").click()
@@ -24,13 +21,8 @@ def search_restaurant(city):
     time.sleep(5)
     html=driver.page_source
     bs = BeautifulSoup(html, "html.parser")
-    results=driver.find_elements("xpath",' //*[@id="EATERY_LIST_CONTENTS"]')
     List_of_rest=bs.find_all('a', class_='oHGMl')
     for j in range (0,10):
         restaurants.append(List_of_rest[j].text)
-    return restaurants
-    
-   
-    
     driver.close()
-
+    return restaurants
