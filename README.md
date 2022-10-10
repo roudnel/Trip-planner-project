@@ -60,13 +60,14 @@ Ce module permet de trouver les meilleurs mois pour visiter une ville détermin�
    **Outils/ Packages** : *BeautifulSoup, Selenium, time*
    
 ###### 3. Dashboard.py
+Le module Dashboard permet d'afficher les informations enregitrées dans le fichier excel créé à la fin du lancement de TriPlanner. 
 
-
-
+   **Outils/ Packages** : *Streamlit, pandas*
 
 ###### 4. Error.py
+Le module error permet d'afficher un message d'erreur au cas où l'utilisateur oublierait d'insérer une critère de recherche dans la première boite de dialogue qui s'affiche.
 
-
+   **Outils/ Packages** : *tkinter*
 
 ###### 5. Interface.py
 
