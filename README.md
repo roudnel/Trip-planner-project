@@ -57,5 +57,36 @@ Ce module contient la fonction permettant de déterminer les meilleures destinat
 ###### 2. BestMonth.py
 Ce module permet de trouver les meilleurs mois pour visiter une ville déterminée en se basant notamment sur la température durant cette période. La fonction définie permet, grâce aux outils BeautifulSoup et Selenium, de récolter les informations nécessaires sur le site "Où et quand" : https://www.ou-et-quand.net/partir/quand/.
     
+   **Outils/ Packages** : *BeautifulSoup, Selenium, time*
+   
+###### 3. Dashboard.py
+
+
+
+
+###### 4. Error.py
+
+
+
+###### 5. Interface.py
+
+
+
+###### 6. Interface_nocity.py
+
+
+###### 7. Interface_nomonth.py
+
+
+###### 8. Place2visit.py
+
+
+###### 9. Restaurants.py
+
+
+###### 10. Temp.py
+
+
+###### 11. TripPlanner.py
 
 
