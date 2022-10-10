@@ -10,4 +10,15 @@ Dépendamment de votre cas, il vous permet d'obtenir la meilleure période à vi
 
 # Utilisation
 
+TPP a été conçu afin de faciliter son utilisation auprès des utilisateurs. A cet effet, l'utilisateur doit suivre les étapes suivantes :
+
+Afin de disposer de l'environnement adéquat
+    1. Télécharger le fichier Trip-planner et l"enregistrer dans un dossier sur son ordinateur
+    2. Télécharger Chromedriver.exe et l'enregistrer dans le dossier trip-planner
+
+Pour lancer TPP
+    3. Ouvrir la terminale à partir de la fenêtre du dossier trip-planner
+    4. 
+ 
+
 
