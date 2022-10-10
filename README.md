@@ -1,6 +1,5 @@
 # Trip planner project (TPP)
  
-####### README.md (explain what is your project and how to run it, what were the issues, what are the key results, ...)
 ## Description 
 
 TPP est un programme destiné à faciliter la planification de vos vacances. 
