@@ -1,12 +1,12 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
-
+import os
 
 def search_restaurant(city):
     
     website = 'https://www.tripadvisor.fr/Restaurants'
-    path = '/Users/hugol/chromedriver'
+    path = os.getcwd() + '/chromedriver'
     driver = webdriver.Chrome(path)
     driver.get(website)
     restaurants=[]
