@@ -1,9 +1,10 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
-import time  
+import time
+import os
 
 def extract_temp(city):
-    path= '/Users/hugol/chromedriver'
+    path= os.getcwd() + '/chromedriver'
     driver = webdriver.Chrome(path)
     url = 'https://www.ou-et-quand.net/partir/quand/'
     driver.get(url)
