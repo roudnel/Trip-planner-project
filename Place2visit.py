@@ -1,17 +1,18 @@
 from selenium import webdriver
 import time
 import pyautogui
+import os
 
 def best_places(city):
-    PATH = "/Users/hugol/chromedriver"
-    driver = webdriver.Chrome(PATH)
+    path = os.getcwd() + '/chromedriver'
+    driver = webdriver.Chrome(path)
     driver.get("https://www.tripadvisor.fr/")
     time.sleep(4)
     driver.find_element_by_xpath('//*[@id="onetrust-reject-btn-container"]').click()
-    time.sleep(4)
+    time.sleep(5)
     driver.find_element_by_xpath("//*[@id='lithium-root']/main/div[1]/div[2]/div/div/div[1]/a").click()
     driver.find_element_by_xpath("/html/body/div[3]/div/form/input[1]").send_keys(city)
-    time.sleep(2)
+    time.sleep(3)
     pyautogui.press("enter")
     driver.find_element_by_xpath("//*[@id='global-nav-attractions']").click()
     time.sleep(5)
