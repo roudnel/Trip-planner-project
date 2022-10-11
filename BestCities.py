@@ -3,10 +3,15 @@ from selenium import webdriver
 import os
 
 def insert_month(month):
-    ## Choix du mois préféré (mp)
+    ## Choix du mois préféré
     PATH = os.getcwd() + "/chromedriver"
     driver = webdriver.Chrome(PATH)
     month = month.lower()
+    if month == "février":
+        month = "fevrier"
+    elif month == "décembre":
+        month = "decembre"
+       
     driver.get("https://partir.ouest-france.fr/meteo/oupartiren"+month+".php")
     driver.find_element_by_class_name("didomi-continue-without-agreeing").click()
     ## Decomposition du Xpath en z et e
