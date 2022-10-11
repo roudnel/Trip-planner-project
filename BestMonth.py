@@ -2,10 +2,11 @@
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
-import time  
+import time
+import os
 
 def insert_city(city): 
-    path= '/Users/hugol/chromedriver'
+    path = os.getcwd() + '/chromedriver'
     driver = webdriver.Chrome(path)
     url = 'https://www.ou-et-quand.net/partir/quand/'
     driver.get(url)
@@ -29,10 +30,5 @@ def extract(bs):
     for i in range(1,13):
         fav = bs.find_all(class_='hidden-xs nopaddingleft')[i]
         lst_situation.append(fav.get_text())
-        
- 
-
     dict_meteo = dict(zip(lst_month, lst_situation))
-              
-    
     return dict_meteo
