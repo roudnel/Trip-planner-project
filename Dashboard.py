@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title("Trip Planner")
+st.title("✈️ Trip Planner")
 st.header(" Préparer vos valises, vous êtes prêt à partir!")
     
 st.write(" Voici votre choix :")
