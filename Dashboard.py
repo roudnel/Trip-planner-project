@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 st.title("✈️ Trip Planner")
-st.header(" Préparer vos valises, vous êtes prêt à partir!")
+st.header(" Préparez vos valises, vous êtes prêt à partir!")
     
 st.write(" Voici votre choix :")
     
@@ -15,4 +15,6 @@ st.dataframe(data)
     
 st.write("Hugo Leonard, ", "Laetitia Santos Moreira, ", "Roudnel Colin")
 st.write("Data source: ")
-st.write("https://www.ou-et-quand.net/ , https://www.tripadvisor.fr/ , https://partir.ouest-france.fr")
+st.write("https://www.ou-et-quand.net/")
+st.write("https://www.tripadvisor.fr/")
+st.write("https://partir.ouest-france.fr")
