@@ -1,9 +1,10 @@
 ### Fonction best city to go per month
 from selenium import webdriver
+import os
 
 def insert_month(month):
     ## Choix du mois préféré (mp)
-    PATH = "/Users/hugol/chromedriver"
+    PATH = os.getcwd() + "/chromedriver"
     driver = webdriver.Chrome(PATH)
     month = month.lower()
     driver.get("https://partir.ouest-france.fr/meteo/oupartiren"+month+".php")
