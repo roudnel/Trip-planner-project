@@ -53,5 +53,5 @@ df.to_csv(os.getcwd() + '/trip_ planner.csv',index=False)
 df2 = pd.read_csv(os.getcwd() + '/trip_ planner.csv')
 
 recap = "A "+ city +" en "+ month +" il fait environ "+ temp
-with open(r'liste.txt', 'w+') as fp:
+with open(r'liste.txt', 'w') as fp:
     fp.write(recap)
