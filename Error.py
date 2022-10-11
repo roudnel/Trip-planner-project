@@ -7,5 +7,3 @@ def error():
     root.withdraw()
     messagebox.showerror('Trip planner Error', 'Veuillez insérer au moins un critère de recherche')
     root.destroy()
- 
-error()
