@@ -57,17 +57,17 @@ Le fichier téléchargé comporte 12 fichiers python avec une extension (.py). C
 #### 1. BestCities.py
 Ce module contient la fonction permettant de déterminer les meilleures destinations pour un mois donné. Grâce à l'outil Selenium, les données sont recueillies sur le site "Où et quand partir" de Ouest France : https://partir.ouest-france.fr/. Son principe de fonctionnement consiste à récupérer et retourner la liste des 10 meilleures destinations à visiter pour le mois choisi.
 
-   **Outils/ Packages** : *Selenium*
+   **Outils/ Packages** : *Selenium, os*
 
 #### 2. BestMonth.py
 Ce module permet de trouver les meilleurs mois pour visiter une ville déterminée en se basant notamment sur la température durant cette période. La fonction définie permet, grâce aux outils BeautifulSoup et Selenium, de récolter les informations nécessaires sur le site "Où et quand" : https://www.ou-et-quand.net/partir/quand/.
     
-   **Outils/ Packages** : *BeautifulSoup, Selenium, time*
+   **Outils/ Packages** : *BeautifulSoup, Selenium, time, os*
    
 #### 3. Dashboard.py
 Le module Dashboard permet d'afficher les informations enregitrées dans le fichier excel créé à la fin du lancement de TriPlanner. 
 
-   **Outils/ Packages** : *Streamlit, pandas*
+   **Outils/ Packages** : *Streamlit, pandas, os*
 
 #### 4. Error.py
 Le module error permet d'afficher un message d'erreur au cas où l'utilisateur oublierait d'insérer une critère de recherche dans la première boite de dialogue qui s'affiche.
@@ -92,19 +92,19 @@ Dans le cas où l'utilisateur ne choisit que la ville et à partir de la fonctio
 #### 8. Place2visit.py
 Ce module contient la fonction capable de lister les 10 endroits à visiter d'une ville donnée. Elle exploite le site https://www.tripadvisor.fr/ notamment grâce à Selenium.
 
-   **Outils/ Packages** : *Selenium, time, pyautogui*
+   **Outils/ Packages** : *Selenium, time, pyautogui, os*
 
 #### 9. Restaurants.py
 Ce module permet de sortir la liste des 10 meilleurs restaurants d'une ville. Les données sont exploitées sur le site https://www.tripadvisor.fr/Restaurants à partir des outils Selenium et BeautifulSoup. La fonction définie prend en compte la ville sélectionnée par l'utilisateur pour accéder aux meilleurs restaurants.
 
-   **Outils/ Packages** : *Selenium, BeautifulSoup, time*
+   **Outils/ Packages** : *Selenium, BeautifulSoup, time, os*
 
 #### 10. Temp.py
 Ce module s'occupe de la température. En effet, il extrait les températures mensuelles pour la ville sélectionnée sur le site https://www.ou-et-quand.net/partir/quand/. Les données recueillies permettent à l'utilisateur de savoir quelle est la tendance habituelle météologique de la ville à visiter pour chaque mois.
 
-   **Outils/ Packages** : *BeautifulSoup, Selenium, time*
+   **Outils/ Packages** : *BeautifulSoup, Selenium, time, os*
    
 #### 11. TripPlanner.py
 Ce derniere module est en réalité une version compactée du code du programme. Il permet de lancer l'ensemble des fonctions que contient les autres modules. En plus de faire appel à tous les modules précités, il utilise également pandas pour enregistrer à la fin les données dans un fichier excel.
 
-   **Outils/ Packages** : *pandas*
+   **Outils/ Packages** : *pandas, os*
