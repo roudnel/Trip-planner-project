@@ -30,7 +30,3 @@ def Interface_Saisie():
     b1.grid(pady=10, row=1, column=3)
     root.mainloop()
     return lc[0], lm[0]
-
-result = Interface_Saisie()
-city = str(result[0])
-month = str(result[1])
