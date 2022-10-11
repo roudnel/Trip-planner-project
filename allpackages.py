@@ -14,3 +14,4 @@ pip install time
 pip install pandas 
 pip install tkinter
 pip install pyautogui 
+pip install os
