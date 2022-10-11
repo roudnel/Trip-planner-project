@@ -25,21 +25,39 @@ if city == '' and month == '':
 elif city == '' and month!='':
     cities = insert_month(month)
     city = city_choice(cities)[0]
+    city = city.capitalize()
     best_place = best_places(city)
     resto=search_restaurant(city)
+    if month == "fevrier":
+        month = "février"
+    elif month == "decembre":
+        month = "décembre"
+    month = month.capitalize()
     temp = extract_temp(city)[month]
  
 elif month == '' and city!='':
     bs = insert_city(city)
     dict_meteo = extract(bs)
     month = month_choice(dict_meteo)
+    city = city.capitalize()
     best_place = best_places(city)
     resto=search_restaurant(city)
+    if month == "fevrier" or month == "Fevrier":
+        month = "Février"
+    elif month == "decembre" or month == "Decembre":
+        month = "Décembre"
+    month = month.capitalize()
     temp = extract_temp(city)[month[0]]
     
 else :
+    city = city.capitalize()
     best_place = best_places(city)
     resto=search_restaurant(city)
+    if month == "fevrier" or month == "Fevrier":
+        month = "Février"
+    elif month == "decembre" or month == "Decembre":
+        month = "Décembre"
+    month = month.capitalize()
     temp = extract_temp(city)[month]
      
 data_dict={ 
