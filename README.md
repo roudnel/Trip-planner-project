@@ -25,11 +25,11 @@ II- Pour lancer TPP et obtenir les informations souhaitées
     
    5. Entrer la commande ci-après pour lancer le logiciel. Une fenêtre va s'ouvrir pour aider l'utilisateur à choisir ses paramètres (Ville et/ou mois de voyage) : 
         
-    python tripPlanner.py
+    python TripPlanner.py
 
    6. Entrer la commande ci-après pour afficher le dashboard : 
    
-    streamlit run dashborad.py
+    streamlit run dashboard.py
 
 Un fichier excel comportant vos informations est également créé et stocké dans le fichier.
 
