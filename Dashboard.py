@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import os
 
 st.title("✈️ Trip Planner")
 st.header(" Préparez vos valises, vous êtes prêt à partir!")
@@ -10,7 +11,7 @@ liste = open(r'liste.txt', 'r')
 lr = liste.read()
 st.write(lr)
  
-data =pd.read_csv('/Users/hugol/Advanced Programming/T2/trip_ planner.csv')
+data =pd.read_csv(os.getcwd() + '/trip_ planner.csv')
 st.dataframe(data)
     
 st.write("Hugo Leonard, ", "Laetitia Santos Moreira, ", "Roudnel Colin")
