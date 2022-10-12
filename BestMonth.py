@@ -2,6 +2,7 @@
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 import time
 import os
 
@@ -11,10 +12,10 @@ def insert_city(city):
     url = 'https://www.ou-et-quand.net/partir/quand/'
     driver.get(url)
     time.sleep(1)
-    driver.find_element_by_class_name("sd-cmp-1pO44").click()
-    driver.find_element_by_id('villepays').send_keys(city)
+    driver.find_element(By.CLASS_NAME, "sd-cmp-1pO44").click()
+    driver.find_element(By.ID, 'villepays').send_keys(city)
     time.sleep(1)
-    driver.find_element_by_class_name('submit').click()
+    driver.find_element(By.CLASS_NAME, 'submit').click()
     html = driver.page_source
     bs = BeautifulSoup(html, "html.parser")
     driver.close()

@@ -1,5 +1,6 @@
 ### Fonction best city to go per month
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 import os
 
 def insert_month(month):
@@ -13,7 +14,7 @@ def insert_month(month):
         month = "decembre"
        
     driver.get("https://partir.ouest-france.fr/meteo/oupartiren"+month+".php")
-    driver.find_element_by_class_name("didomi-continue-without-agreeing").click()
+    driver.find_element(By.CLASS_NAME, "didomi-continue-without-agreeing").click()
     ## Decomposition du Xpath en z et e
     z = "//*[@id='middle']/table[3]/tbody/tr[" 
     e = "]/td[1]/a[1]" 
@@ -27,7 +28,7 @@ def insert_month(month):
     villes=[] 
     for i in range(1, len(xpaths)+1):
         xpath=z+str(i)+e
-        abc = driver.find_element_by_xpath(xpath)
+        abc = driver.find_element(By.XPATH, xpath)
         ville=abc.text
         villes.append(ville)
     driver.close()
