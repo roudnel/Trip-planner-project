@@ -46,8 +46,8 @@ elif month == '' and city!='':
         month = "Février"
     elif month == "decembre" or month == "Decembre":
         month = "Décembre"
-    month = month.capitalize()
-    temp = extract_temp(city)[month[0]]
+    month = str(month[0])
+    temp = extract_temp(city)[month]
     
 else :
     city = city.capitalize()
