@@ -5,6 +5,12 @@
  
  [Utilisation](#Utilisation)
  
+ [Le fichier Trip-planner-project](#tpp)
+  
+   [Composantes](#composantes)
+   
+ [Principales difficultés](#diff)
+ 
  [Développement](#Developpement)
  
  
@@ -56,7 +62,9 @@ II- Pour lancer TPP et obtenir les informations souhaitées
    
     streamlit run dashboard.py
 
+<a name="tpp"></a> 
 # Le fichier Trip-planner-project
+<a name="composantes"></a> 
 ## Composantes
 Le fichier téléchargé comporte 11 fichiers python avec une extension (.py). Chacun de ces fichiers est un module contenant une fonction devant permettre l'extraction des différentes informations souhaitées. Nous pouvons citer alphabétiquement : 
     
@@ -127,6 +135,7 @@ Ce derniere module est en réalité une version compactée du code du programme.
 
    **Outils/ Packages** : *pandas, os*
 
+<a name="diff"></a> 
 ## Principales difficultés
  #### I- Web scraping 
  
