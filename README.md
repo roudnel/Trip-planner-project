@@ -2,18 +2,12 @@
  <a name="hdp"></a> 
  ## Sommaire
  
- [Description](#Description)
- 
- [Utilisation](#Utilisation)
- 
- [Le fichier Trip-planner-project](#tpp)
-  
-   [Composantes](#composantes)
-   
- [Principales difficultés](#diff)
- 
- [Développement](#Developpement)
- 
+- [Description](#Description)
+- [Utilisation](#Utilisation)
+- [Le fichier Trip-planner-project](#tpp)
+- [Composantes](#composantes)
+- [Principales difficultés](#diff)
+- [Développement](#Developpement)
  
 <a name="Description"></a> 
 ## Description
