@@ -1,6 +1,20 @@
 # Trip planner project (TPP)
+ ## Sommaire
  
-## Description 
+ [Description](#Description)
+ 
+ [Développement](#Developpement)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+## [Description](#Description)
 
 TPP est un programme destiné à faciliter la planification de vos vacances. 
 Pour votre séjour, si vous devez visiter une ville bien précise ou encore, si vous prévoyez de partir en vacances à un mois bien déterminé ignorant votre destination, TPP peut vous accompagner dans vos prépartions.
@@ -133,7 +147,7 @@ Ce derniere module est en réalité une version compactée du code du programme.
 
    a) Dans certains modules les input devaient être en miniscule et sans accent alors que dans d'autres modules, ils devaient contenir une majuscule au début et l'accent.
     
-# Développement
+## [Développement](#Developpement)
 Ce programme a été développé sur python 3.9.12 avec les versions des différents packages installés suivant :
 - Streamlit (V 1.13.0)
 - BeautifulSoup (V 4.11.1)
