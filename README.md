@@ -1,5 +1,6 @@
 # Trip planner project (TPP)
- ## [Sommaire](#hdp)
+ <a name="hdp"></a> 
+ ## Sommaire
  
  [Description](#Description)
  
@@ -162,6 +163,4 @@ Ce programme a été développé sur python 3.9.12 avec les versions des différ
 - Pandas (V 1.4.2)
 - Pyautogui (V 0.9.53)
 
-
-<a name="hdp"></a>
-#### Haut de page
+#### [Haut de page](#hdp)
