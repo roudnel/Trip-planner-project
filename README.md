@@ -1,5 +1,5 @@
 # Trip planner project (TPP)
- ## Sommaire
+ ## [Sommaire](#hdp)
  
  [Description](#Description)
  
@@ -12,13 +12,6 @@
  [Principales difficultés](#diff)
  
  [Développement](#Developpement)
- 
- 
- 
- 
- 
- 
- 
  
  
 <a name="Description"></a> 
@@ -168,3 +161,7 @@ Ce programme a été développé sur python 3.9.12 avec les versions des différ
 - Selenium (V 4.5.0)
 - Pandas (V 1.4.2)
 - Pyautogui (V 0.9.53)
+
+
+<a name="hdp"></a>
+#### Haut de page
