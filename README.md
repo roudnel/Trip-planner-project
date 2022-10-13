@@ -110,17 +110,26 @@ Ce derniere module est en réalité une version compactée du code du programme.
    **Outils/ Packages** : *pandas, os*
 
 ## Principales difficultés
- I- Web scraping
-    a) Choix des sites à web scraper : Certains websites exploités en début de projet ont par la suite été inefficaces dès qu'il s'agissait de villes moins connues au niveau international.
-    b) Trip advisor : 
-       1. Ce site présente un affichage dynamique qui change le placement des boutons et des informations de localisation (xpath, id, class_name) à chaque lancement rendant impossible l'automatisation des tâches. 
-       2. La taille de la fenêtre du navigateur ouvert faisait varier la disposition  et les informations de localisation.
-    c) La connexion internet : Si le débit ralentissait, les sites web n'avaient pas le temps de réaliser les différentes têches et, le programme affichait un message d'erreur.
-
- II- Compatibilité des versions de logiciels utilisés
-     a) Streamlit avait un bug sur la version 3.9.7 de python
-     b) Une mise à jour du package Selenium a rendu obselète le format utilisé pour nos requêtes
+ #### I- Web scraping 
  
- III- Compilation (code)
-     a) Dans certains modules les input devaient être en miniscule et sans accent alors que dans d'autres modules, ils devaient contenir une majuscule au début et l'accent.
+   a) Choix des sites à web scraper : Certains websites exploités en début de projet ont par la suite été inefficaces dès qu'il s'agissait de villes moins connues au niveau international.
+   
+   b) Trip advisor : 
+   
+   1. Ce site présente un affichage dynamique qui change le placement des boutons et des informations de localisation (xpath, id, class_name) à chaque lancement rendant impossible l'automatisation des tâches. 
+   2. La taille de la fenêtre du navigateur ouvert faisait varier la disposition  et les informations de localisation.
+       
+   c) La connexion internet : Si le débit ralentissait, les sites web n'avaient pas le temps de réaliser les différentes têches et, le programme affichait un message d'erreur.
+
+####  II- Compatibilité des versions de logiciels utilisés :
+
+  
+  a) Streamlit avait un bug sur la version 3.9.7 de python.
+   
+  b) Une mise à jour du package Selenium a rendu obselète le format utilisé pour nos requêtes
+ 
+####  III- Compilation (code)
+
+
+   a) Dans certains modules les input devaient être en miniscule et sans accent alors que dans d'autres modules, ils devaient contenir une majuscule au début et l'accent.
     
