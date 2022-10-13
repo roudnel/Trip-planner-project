@@ -16,14 +16,14 @@
  
  
  
-## [Description](#Description)
+## Description(#Description)
 
 TPP est un programme destiné à faciliter la planification de vos vacances. 
 Pour votre séjour, si vous devez visiter une ville bien précise ou encore, si vous prévoyez de partir en vacances à un mois bien déterminé ignorant votre destination, TPP peut vous accompagner dans vos prépartions.
 
 Dépendamment de votre cas, il vous permet d'obtenir la meilleure période à visiter une ville ou les meilleures destinations pour un mois donné, les 10 meilleurs endroits à visiter dans la ville selectionnée et les meilleurs restaurants où manger. 
 
-## [Utilisation](#Utilisation)
+## Utilisation(#Utilisation)
 
 TPP a été conçu afin de faciliter son utilisation auprès des utilisateurs. A cet effet, l'utilisateur doit suivre les étapes suivantes :
 
@@ -149,7 +149,7 @@ Ce derniere module est en réalité une version compactée du code du programme.
 
    a) Dans certains modules les input devaient être en miniscule et sans accent alors que dans d'autres modules, ils devaient contenir une majuscule au début et l'accent.
     
-## [Développement](#Developpement)
+## Développement(#Developpement)
 Ce programme a été développé sur python 3.9.12 avec les versions des différents packages installés suivant :
 - Streamlit (V 1.13.0)
 - BeautifulSoup (V 4.11.1)
