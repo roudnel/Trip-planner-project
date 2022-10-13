@@ -28,10 +28,12 @@ elif city == '' and month!='':
     city = city.capitalize()
     best_place = best_places(city)
     resto=search_restaurant(city)
-    if month == "fevrier":
-        month = "février"
-    elif month == "decembre":
-        month = "décembre"
+    if month == "fevrier" or month == "Fevrier":
+        month = "Février"
+    elif month == "decembre" or month == "Decembre":
+        month = "Décembre"
+    elif month == "aout" or month == "Aout":
+        month = "Août"
     month = month.capitalize()
     temp = extract_temp(city)[month]
  
@@ -46,6 +48,8 @@ elif month == '' and city!='':
         month = "Février"
     elif month == "decembre" or month == "Decembre":
         month = "Décembre"
+    elif month == "aout" or month == "Aout":
+        month = "Août"
     month = str(month[0])
     temp = extract_temp(city)[month]
     
@@ -57,6 +61,8 @@ else :
         month = "Février"
     elif month == "decembre" or month == "Decembre":
         month = "Décembre"
+    elif month == "aout" or month == "Aout":
+        month = "Août"
     month = month.capitalize()
     temp = extract_temp(city)[month]
      
