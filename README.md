@@ -40,7 +40,7 @@ II- Pour lancer TPP et obtenir les informations souhaitées
 
 # Le fichier Trip-planner-project
 ## Composantes
-Le fichier téléchargé comporte 12 fichiers python avec une extension (.py). Chacun de ces fichiers est un module contenant une fonction devant permettre l'extraction des différentes informations souhaitées. Nous pouvons citer alphabétiquement : 
+Le fichier téléchargé comporte 11 fichiers python avec une extension (.py). Chacun de ces fichiers est un module contenant une fonction devant permettre l'extraction des différentes informations souhaitées. Nous pouvons citer alphabétiquement : 
     
      1. BestCities.py
      2. BestMonth.py
