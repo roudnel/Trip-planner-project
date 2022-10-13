@@ -3,6 +3,8 @@
  
  [Description](#Description)
  
+ [Utilisation](#Utilisation)
+ 
  [Développement](#Developpement)
  
  
@@ -21,7 +23,7 @@ Pour votre séjour, si vous devez visiter une ville bien précise ou encore, si 
 
 Dépendamment de votre cas, il vous permet d'obtenir la meilleure période à visiter une ville ou les meilleures destinations pour un mois donné, les 10 meilleurs endroits à visiter dans la ville selectionnée et les meilleurs restaurants où manger. 
 
-## Utilisation
+## [Utilisation](#Utilisation)
 
 TPP a été conçu afin de faciliter son utilisation auprès des utilisateurs. A cet effet, l'utilisateur doit suivre les étapes suivantes :
 
