@@ -133,3 +133,10 @@ Ce derniere module est en réalité une version compactée du code du programme.
 
    a) Dans certains modules les input devaient être en miniscule et sans accent alors que dans d'autres modules, ils devaient contenir une majuscule au début et l'accent.
     
+# Développement
+Ce programme a été développé sur python 3.9.12 avec les versions des différents packages installés suivant :
+- Streamlit (V 1.13.0)
+- BeautifulSoup (V 4.11.1)
+- Selenium (V 4.5.0)
+- Pandas (V 1.4.2)
+- Pyautogui (V 0.9.53)
