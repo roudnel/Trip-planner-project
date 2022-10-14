@@ -135,6 +135,8 @@ Ce derniere module est en réalité une version compactée du code du programme.
    2. La taille de la fenêtre du navigateur ouvert faisait varier la disposition  et les informations de localisation.
        
    c) La connexion internet : Si le débit ralentissait, les sites web n'avaient pas le temps de réaliser les différentes têches et, le programme affichait un message d'erreur.
+   
+   d) Certains path contenaient une partie variable intégrée au milieur du path.
 
 ####  II- Compatibilité des versions de logiciels utilisés :
 
