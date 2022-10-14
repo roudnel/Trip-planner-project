@@ -26,7 +26,7 @@ TPP a été conçu afin de faciliter son utilisation auprès des utilisateurs. A
 I- Afin de disposer de l'environnement adéquat (avec une version de python supérieure à 3.9.7)
 
    1. Télécharger le fichier Trip-planner-project et l"enregistrer dans un dossier sur son ordinateur
-   2. Télécharger Chromedriver.exe et l'enregistrer dans le dossier trip-planner-project
+   2. Télécharger la version Chromedriver.exe compatible avec le chrome installé sur votre appareil et l'enregistrer dans le dossier trip-planner-project
 
 II- Pour lancer TPP et obtenir les informations souhaitées
 
